@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>gestion</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- start navbar -->
+    <nav class="nav">
+      <img src="" alt="" srcset="">
+      <a class="nav-link active" aria-current="page" href="#">SafiAir</a>
+        </nav>
+ <!-- end navbar -->
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id_vol#</th>
+      <th scope="col"> ville de départ</th>
+      <th scope="col">ville d'arrivé</th>
+      <th scope="col">L'heure de départ</th>
+      <th scope="col">L'heure d'arrivé</th>
+      <th scope="col">Date de Départ</th>
+      <th scope="col">Date d'arrivé</th>
+      <th scope="col">nombre_place_initiall</th>
+      <th scope="col">Nombre _de_places</th>
+      <th scope="col">Reserver</th>
+
+
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <% vols.forEach(function(vol){ %>
+      <tr>
+          <td><%= vol.id %> <input type="hidden" name="idya" value="<%= vol.id %>"></td>
+          <td><%= vol.ville_depart %></td>
+          <td><%= vol.ville_darrive%></td>
+          <td><%= vol.date_depart %></td>
+          <td><%= vol.date_arrive %></td>
+          <td><%= vol.lheure_depart%></td>
+          <td><%= vol.lheure__arrive %></td>
+          <td><%= vol.nombre_place_initiall%></td>
+          <td><%= vol.nombre_places%></td>
+          <td>
+              <a href="listVol/<%= vol.id %>" class="btn btn-sm btn-primary" >Reserver</a>
+              <!-- <input type="submit" class="btn btn-sm btn-primary" value="Reserver"> -->
+              <!-- <a href="/reserv" class="btn btn-sm btn-primary" >Reserver</a> -->
+          </td>
+      </tr>
+  <%});%>
+  </tbody>
+</table>
+</body>
+</html>

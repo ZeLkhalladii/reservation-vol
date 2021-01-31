@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>gestion</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- start navbar -->
+    <nav class="nav">
+      <img src="" alt="" srcset="">
+      <a class="nav-link active" aria-current="page" href="#">SafiAir</a>
+        </nav>
+ <!-- end navbar -->
+
+<section id="cover">
+    <h2>ID VOLE :<%= id %></h2>
+    <div class="cover-caption">
+        <form action="/save_reserv" method="POST" >
+          <h1>Formulair</h1>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="">Nom</label>
+              <input type="text" class="form-control" id="" placeholder=" nom" name="nom"> 
+            </div>
+            <div class="form-group col-md-6">
+              <label for=""> Prenom</label>
+              <input type="text" class="form-control" id="" placeholder=" prenom" name="prenom">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for=""> Telephone</label>
+            <input type="text" class="form-control" id="" placeholder="Telephone" name="telephone">
+          </div>
+            
+            <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="">Email</label>
+              <input type="email"  id="" class="form-control" placeholder="email" name="email">
+            </div><br>
+            <div class="form-group col-md-6">
+              <label for="">Code</label>
+              <input type="text"  id="" class="form-control" placeholder="Code" name="code">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="">identifient de paiment</label>
+              <input type="text"  id="" class="form-control" placeholder="identifient de paiment" name="ident_paiment">
+            </div><br>
+            <div class="form-group col-md-6">
+              <label for="">Code de paiment</label>
+              <input type="text"  id="" class="form-control" placeholder="Code de paiment" name="code_paiment">
+            </div>
+          </div>
+          <input type="submit" class="btn btn-primary" value="VALID">
+          
+        </div>
+        </form>
+</section>
+</body>
+</html>
