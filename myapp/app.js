@@ -55,22 +55,18 @@ app.get('/listVol/:volId',(req, res) =>{
 
 app.post('/save_reserv',(req,res) => {
 
-  //start
-  // app.get('/edit/:userId',(req, res) =>{
-      // const id_vol1 = req.body.id_vol;
+ 
       const nombre_places_selected = req.body.nombre_place;
       let sql4 = `SELECT * FROM vols WHERE id = 3`;
       let query = connection.query(sql4, (err, firstresult) =>{
           if(err) throw err;
           else{
-              var achkayen = '3lalah';
               var nbrpls = firstresult[0];
               var nombre_places_rest = nbrpls.nombre_places;
               // var hid = '';
               
               if(nombre_places_selected <=nombre_places_rest){
                   alertmsg = 'Succes';
-                  achkayen = 'rak nadi';
                   let data = {nom:req.body.nom,prenom:req.body.prenom, email:req.body.email, telephone:req.body.telephone};
                   globalNom = req.body.nom;
                   globalPrenom = req.body.prenom;
@@ -105,7 +101,6 @@ app.post('/save_reserv',(req,res) => {
                                           volid : firstresult[0],
                                           nombre_places_rest : nombre_places_rest - nombre_places_selected,
                                           nombre_places_selected,
-                                          achkayen,
                                           allertt : ('<h1>Hello Express!</h1>'),
                                           alertmsg
                                       });
@@ -115,10 +110,8 @@ app.post('/save_reserv',(req,res) => {
                           });
                           
                       }
-                      // res.redirect('/');
                   });
               }else{
-                  achkayen = '9awedtiha';
                   alertmsg = '';
                   res.render('email',{
                       title : 'CRUD Operation using NodeJS / ExpressJS / MySQL',
@@ -129,13 +122,11 @@ app.post('/save_reserv',(req,res) => {
                       allertt : ('<h1>Hello Express!</h1>'),
                       alertmsg
                   });
-                  // res.redirect('/reserv/'+globalvolid);
               }
           }
           
       });
-  // });
-  //end
+ 
 
 
 
