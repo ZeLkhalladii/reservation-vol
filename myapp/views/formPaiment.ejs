@@ -15,10 +15,9 @@
  <!-- end navbar -->
 
 <section id="cover">
-    <h2>ID VOLE :<%= id %></h2>
     <div class="cover-caption">
         <form action="/save_reserv" method="POST" >
-          <h1>Formulair</h1>
+          <h1>Paiment</h1>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="">Nom</label>
@@ -53,6 +52,10 @@
               <label for="">Code de paiment</label>
               <input type="text"  id="" class="form-control" placeholder="Code de paiment" name="code_paiment">
             </div>
+          </div>
+          <div class="form-group">
+            <label for=""> Nombre de places</label>
+            <input type="number" class="form-control" id="nombre_place" placeholder="Nombre de places" name="nombre_place" max="20" min="1">
           </div>
           <input type="submit" class="btn btn-primary" value="VALID">
           
